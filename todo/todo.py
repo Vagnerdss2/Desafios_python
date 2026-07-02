@@ -31,14 +31,18 @@ while True:
         if tarefa_id in tarefas:
         # del tarefas[int(input("Digite o numero da tarefa pra deletar: "))]
             del tarefas[tarefa_id]
-        print("Tarefa removida com sucesso!")
-        print("=" * 15)
+            print("Tarefa removida com sucesso!")
+            print("=" * 15)
     elif opcao == 4:
         tareda_concluida = int(input("Digite o id da tarefa a ser concluida: "))
         if tareda_concluida in tarefas:
             tarefas[tareda_concluida]["concluido"] =  True
             print("Tarefa concluida com sucesso!")
             print("=" * 15)
+        else:
+            print("Opção invalida!")
+            print("=" * 15)
+            continue
     elif opcao == 5:
         print("Saindo do programa...")
         time.sleep(1)
@@ -47,10 +51,3 @@ while True:
         print("Opção invalida!")
         print("=" * 15)
         continue
-
-
-
-
-
-
-
